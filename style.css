@@ -1,0 +1,121 @@
+:root {
+    --background: #F5F5F5;
+    --main-text: black;
+    --headers: #32612D;
+    --button: #32612D;
+    --button-activated: #03AC13;
+    --quiz-text: ivory; 
+}
+
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: var(--background);
+}
+
+
+/* CSS Webpage - Aesthetic */
+
+h1{
+    color: var(--headers);
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+h2{
+    color: var(--headers);
+    font-size: 2rem;
+}
+
+h3{
+   color: var(--main-text);
+   font-size: .9rem; 
+}
+
+p{
+    color: var(--main-text);
+    font-size: 1.3rem;
+    text-decoration: bold;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px 20px;
+}
+
+.link {
+    color: var(--main-text);
+}
+
+.link:hover {
+    color: var(--button-activated);
+}
+
+code {
+    color: var(--headers);
+    font-size: 1.6rem;
+    padding: 0 20px;
+    margin: 0px 0px 50px 0px;
+}
+
+
+/* center position: when clicked on they will move */
+.intro,
+.questions,
+.quiz-score,
+.high-score-class {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    right: 20%;
+}
+
+.quiz-instructions {
+    text-align:center;
+}
+
+button {
+    display: flex;
+    flex-direction: column;
+    color: var(--quiz-text);
+    background-color: var(--button);
+    padding: 10px 100px 10px 10px;
+    border-radius: 1.2rem;
+    margin-bottom: 20px;
+    border: 0px;
+    font-size: 1.3rem;
+    text-align: left;
+}
+
+button:hover {
+    background-color: var(--button-activated);
+    cursor: grab;
+}
+
+.start-button {
+    padding: 10px 50px;
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
+.quiz-restart,
+.retake,
+.score {
+    padding: 20px;
+}
+
+
+/* Functional CSS */
+
+.hide {
+    display: none;
+}
+
+#high-scores {
+    display: none;
+}
+

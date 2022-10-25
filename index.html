@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Quiz</title>
+    <link rel="stylesheet" href="./style.css"/>
+</head>
+
+
+<body>
+<header>
+    <nav>
+        <h3><a href="#high-scores" class="link">High Scores</a></h3>
+        <h3>Time: <div class="time"></div></h3>
+    </nav>
+</header>
+
+<main>
+    <!-- Quiz Introduction -->
+    <section class="intro">
+        <h1>Coding Quiz</h1>
+        <p class="quiz-instructions">Try to answer the following code-related questions
+            within the time limit. Keep in mind that the correct answers will 
+            penalize your score/time by ten seconds!</p>
+        <!-- start quiz button -->
+        <button class="start-button">Start Quiz</button>
+    </section>
+    
+    <!-- Quiz Section -->
+<section>
+    <article id="section-1" class="questions hide">
+        <h2>1. Commonly used data types do NOT include:</h2>
+        <div class="question-answers">
+            <!-- Each of these list items need to be a button -->
+            <button class="button-1">booleans</button>
+            <button class="button-1 correct-answer">alerts</button>
+            <button class="button-1">strings</button>
+            <button class="button-1">numbers</button>
+        </div>
+    </article>
+    <article id="section-2" class="questions hide">
+        <h2>2. Is there a difference between Java and Javascript?</h2>
+        <div class="question-answers">
+            <!-- Each of these list items need to be a button -->
+            <button class="button-2 correct-answer">Yes</button>
+            <button class="button-2">No</button>
+        </div>
+    </article>
+    <article id="section-3" class="questions hide">
+        <h2>3. What is the following code considered to be?</h2>
+        <code>var dataType = ("12")</code>
+        <div class="question-answers">
+            <!-- Each of these list items need to be a button -->
+            <button class="button-3">boolean</button>
+            <button class="button-3">number</button>
+            <button class="button-3 correct-answer">string</button>
+            <button class="button-3">undefined</button>
+        </div>
+    </article>
+    <article id="section-4" class="questions hide">
+        <h2>4. Arrays can be stored in which of the following?</h2>
+        <div class="question-answers">
+            <!-- Each of these list items need to be a button -->
+            <button class="button-4">booleans</button>
+            <button class="button-4">numbers and strings</button>
+            <button class="button-4">other arrays</button>
+            <button class="button-4 correct-answer">all of the above</button>
+        </div>
+    </article>
+</section>
+
+    <!-- Quiz Score -->
+    <section class="quiz-score hide">
+        <h2>Your Score: </h2>
+        <div class="quiz-result"></div>
+        <label for="initial-input">Enter Initials:</label>
+        <input type="text" id="initial-input" name="initial">
+        <input type="submit" value="Submit"><br>
+        <button class="retake">Retake Quiz</button>
+        <button class="score">High Scores</button>
+    </section>
+
+    <!-- High Score -->
+    <section id="high-scores" class="high-score-class">
+        <h2>High Scores</h2>
+        <!-- add high scores -->
+        <button class="quiz-restart">Home</button>
+    </section>    
+</main>
+        
+<script src="./script.js"></script>  
+</body>
+</html>
