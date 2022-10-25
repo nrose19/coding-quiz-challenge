@@ -14,4 +14,4 @@
 - THEN I can save my initials and score
 
 ## Link
-Here is the link to the <a href="">deployed page</a>.
+Here is the link to the <a href="https://nrose19.github.io/coding-quiz-challenge/#high-scores">deployed page</a>.
