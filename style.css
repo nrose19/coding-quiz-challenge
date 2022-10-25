@@ -108,6 +108,17 @@ button:hover {
     padding: 20px;
 }
 
+.wrong-statement,
+.correct-statement {
+    color: var(--button-activated);
+    opacity: 1rem;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
 
 /* Functional CSS */
 
@@ -118,4 +129,5 @@ button:hover {
 #high-scores {
     display: none;
 }
+
 

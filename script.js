@@ -15,7 +15,12 @@ var section2 = document.getElementById("section-2");
 var section3 = document.getElementById("section-3");
 var section4 = document.getElementById("section-4");
 // question answer buttons
-var correctEl = document.querySelector(".correct-answer");
+var correct1 = document.getElementById("correct");
+var correct2 = document.getElementById("correct2");
+var correct3 = document.getElementById("correct3");
+var correct4 = document.getElementById("correct4");
+var right = document.querySelector('.correct-statement');
+var wrong = document.querySelector('.wrong-statement');
 // quiz results
 var retakeQuiz = document.querySelector(".retake");
 var goToHighScores = document.querySelector(".score");
@@ -40,6 +45,7 @@ function setTime() {
   
       if(timeLeft === 0) {
         clearInterval(timerInterval);
+        restart(timeLeft);
       }
     }, 1000);
   }
@@ -47,7 +53,7 @@ function setTime() {
 //  QUESTION ONE
 // making sure all buttons are able to be clicked...once they are clicked, it moves onto next question!
 for(var question1 = document.querySelectorAll(".button-1"), i=0; i<question1.length; i++){
-    question1[i].addEventListener('click', questionOne, rightOrWrong);
+    question1[i].addEventListener('click', questionOne);
 }  
 
 function questionOne() {
@@ -57,7 +63,16 @@ function questionOne() {
 }
 
 // right or wrong answer?
+correct1.addEventListener('click', rightAnswer);
 
+function rightAnswer(){
+    if(correct1){
+        right.classList.remove('hide');
+    } 
+    else{
+        wrong.classList.remove('hide');
+    } 
+}
 
 
 //  QUESTION TWO
@@ -70,6 +85,17 @@ function questionTwo() {
     console.log("question two button activated");
     section2.classList.add('hide');
     section3.classList.remove('hide');
+}
+
+// right or wrong answer?
+correct2.addEventListener('click', rightAnswer2);
+
+function rightAnswer2(){
+    if(correct2){
+        right.classList.remove('hide');
+    } else {
+        wrong.classList.remove('hide');
+    } 
 }
 
 
@@ -85,6 +111,17 @@ function questionThree() {
     section4.classList.remove('hide');
 }
 
+// right or wrong answer?
+correct3.addEventListener('click', rightAnswer3);
+
+function rightAnswer3(){
+    if(correct3){
+        right.classList.remove('hide');
+    } else {
+        wrong.classList.remove('hide');
+    } 
+}
+
 //  QUESTION FOUR
 // making sure all buttons are able to be clicked...once they are clicked, it moves onto next question!
 for(var question4 = document.querySelectorAll(".button-4"), i=0; i<question4.length; i++){
@@ -97,17 +134,21 @@ function questionFour() {
     quizScoreEl.classList.remove('hide');
 }
 
+// right or wrong answer?
+correct4.addEventListener('click', rightAnswer4);
 
-function rightOrWrong(){
-    if(click(correctEl)){
-        console.log("right!");
+function rightAnswer4(){
+    if(correct4){
+        right.classList.remove('hide');
     } else {
-        console.log("wrong!");
-    }
+        wrong.classList.remove('hide');
+    } 
 }
 
 
 // Quiz Score Results
+
+
 
     // quiz result buttons
         retakeQuiz.addEventListener('click', retake)
